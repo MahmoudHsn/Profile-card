@@ -1,0 +1,100 @@
+:root {
+    --color: hsl(185, 75%, 39%);
+    --color: hsl(229, 23%, 23%);
+    --color: hsl(227, 10%, 46%);
+    --color: hsl(0, 0%, 59%);
+}
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+}
+main {
+    width: 100%;
+    height: 100vh;
+    background-color: hsl(185, 75%, 39%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+main::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-image: url(./bg-pattern-bottom.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: -40%;
+    right: -50%;
+}
+main::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-image: url(./bg-pattern-bottom.svg);
+    background-repeat: no-repeat;
+    transform: rotate(180deg);
+    position: absolute;
+    top: -40%;
+    left: -50%;
+}
+main .card {
+    width: 300px;
+    border-radius: 10px;
+    background-color: white;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+main .card .background {
+    width: 100%;
+    max-width: 100%;
+}
+main .card .image {
+    max-width: 100%;
+    border: 4px solid white;
+    border-radius: 50%;
+    position: absolute;
+    top: 70px;
+    left: 50%;
+    transform: translatex(-50%);
+}
+main .card h3 {
+    margin-top: 70px;
+    color: hsl(229, 23%, 23%);
+    font-size: 18px;
+    font-weight: 700;
+}
+main .card h3 .age {
+    font-weight: 400;
+    color: hsl(227, 10%, 46%)
+}
+main .card .place {
+    display: block;
+    font-size: 14px;
+    color: hsl(227, 10%, 46%);
+    margin-top: 5px;
+    margin-bottom: 25px;
+}
+main .card .stats {
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid hsla(0, 0%, 59%, 0.4);
+}
+main .card .stats .number {
+    font-size: 18px;
+    font-weight: 700;
+    color: hsl(229, 23%, 23%);
+}
+main .card .stats {
+    font-size: 10px;
+    font-weight: 400;
+    color: hsl(0, 0%, 59%);
+    letter-spacing: 1px;
+}
